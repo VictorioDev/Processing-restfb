@@ -8,8 +8,8 @@ import com.restfb.types.Comment;
 
 private List<Ball> balls = new ArrayList<Ball>();
 private List<Integer> posi = new ArrayList<Integer>();
-final String ACESS_TOKEN = "EAACEdEose0cBANPPysPAImn3loHmQ3JHi6VnGKaswOy9WzCVo9RxuIeB5ZAi81ZC2hawN8ZCkcKFnBTgBbawROm4aV1ZAhQCVDBZBaN4qETBbBTNLjbhc52AunKrqZAQKVtZA1zLDl0DqNZAUb1FPvG1wU5NkJQ8lU586kAd4GgmqwZDZD";
-final String TARGET_ID = "894001074051876_1135908729861108";
+final String ACESS_TOKEN = "Paste here your AcessToken";
+final String TARGET_ID = "Paste here the post id";
 FacebookClient fbClient = new DefaultFacebookClient(ACESS_TOKEN, Version.LATEST);
 private List<Ball> textToDraw = new ArrayList<Ball>();
 
