@@ -15,7 +15,6 @@ private List<Ball> textToDraw = new ArrayList<Ball>();
 
 public void setup(){
   size(800,600);
-  //fullScreen();
   getPostsCount();
   
  frameRate(60);
@@ -35,7 +34,6 @@ public void draw(){
     }
   }
   
-  //System.out.println("Framerate: "+ frameRate);
   fill(255);
   for(Ball b : textToDraw){
     text(b.text,b.vetor.x,b.vetor.y);
@@ -48,13 +46,6 @@ public void draw(){
   
   
 }
-
-/*void keyReleased() {
-  if (key == ' ') {
-    balls.add(new Ball(new PVector(random(width), height))); 
-  }
-}*/
-
 
 private void getPostsCount(){
   

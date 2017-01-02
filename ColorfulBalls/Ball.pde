@@ -28,11 +28,6 @@ class Ball{
     this.vel-=grav;
     
     if(this.vel <= 0){
-      
-      //if(this.vetor.y >= height){
-          
-      //}
-      
       float radius = 50;
       int numPoints= 10;
       float angle = TWO_PI/(float)numPoints;
