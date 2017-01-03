@@ -5,9 +5,7 @@ import com.restfb.FacebookClient;
 import com.restfb.Version;
 import com.restfb.types.Comment;
 
-
 private List<Ball> balls = new ArrayList<Ball>();
-private List<Integer> posi = new ArrayList<Integer>();
 final String ACESS_TOKEN = "Paste here your AcessToken";
 final String TARGET_ID = "Paste here the post id";
 FacebookClient fbClient = new DefaultFacebookClient(ACESS_TOKEN, Version.LATEST);
@@ -16,15 +14,13 @@ private List<Ball> textToDraw = new ArrayList<Ball>();
 public void setup(){
   size(800,600);
   getPostsCount();
-  
- frameRate(60);
+  frameRate(60);
 }
 
 
 public void draw(){
   background(0);
-  for(int i = 0; i < balls.size();i++){
-    Ball b = balls.get(i);
+  for(Ball b: balls){
     if(b.visible){
        b.update();
        b.show();
@@ -43,12 +39,9 @@ public void draw(){
     getPostsCount();
   }
   
-  
-  
 }
 
 private void getPostsCount(){
-  
   Connection<Comment> allComments = fbClient.fetchConnection(TARGET_ID+"/comments", Comment.class);
   for(List<Comment> postcomments : allComments){
     for (Comment comment : postcomments){
@@ -59,7 +52,6 @@ private void getPostsCount(){
   }     
 }
 
-
 private boolean notIn(String text){
   int cont = 0;
   for(Ball b: textToDraw){
@@ -67,7 +59,6 @@ private boolean notIn(String text){
       cont++;
     }
   }
-  
   if(cont == 0){
     return true;
   }else {

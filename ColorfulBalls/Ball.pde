@@ -41,7 +41,4 @@ class Ball{
       this.visible = false;
     }
   }
-  
-  
-  
 }
